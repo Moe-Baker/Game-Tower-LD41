@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787fb5b436c00c148bfd91347a89f38a, type: 3}
+  m_Name: Game
+  m_EditorClassIdentifier: 
+  platformOverride:
+    enabled: 0
+    value: 1
+  pause: {fileID: 11400000, guid: 76290ae36afcd7a45bbc357ceedef6c5, type: 2}
+  scenes: {fileID: 11400000, guid: 2f7e510c884af494b8bfb236243c4573, type: 2}
+  options: {fileID: 11400000, guid: b6960d3a3338ea6438d450545345c7ec, type: 2}
+  saves: {fileID: 11400000, guid: f635996e63d5d374c881a5e78e32eba3, type: 2}
