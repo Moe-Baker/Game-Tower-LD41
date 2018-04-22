@@ -21,8 +21,9 @@ using Moe.Tools;
 
 namespace Game
 {
-	public class AI : MonoBehaviour
-	{
+    [RequireComponent(typeof(Entity))]
+	public class AI : Entity, IDamager
+    {
         public ModulesManager Modules { get; protected set; }
 		public class ModulesManager : MoeLinkedModuleManager<Module, AI>
         {
@@ -35,8 +36,15 @@ namespace Game
 
         }
 
+        public Entity Entity { get; protected set; }
+
+        string IDamager.Name { get { return name; } }
+        GameObject IDamager.GameObject { get { return gameObject; } }
+
         protected virtual void Start()
         {
+            Entity = GetComponent<Entity>();
+
             InitModules();
         }
 

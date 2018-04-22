@@ -34,6 +34,10 @@ namespace Game
         public Castle Castle { get { return castle; } }
 
         [SerializeField]
+        protected ScoreManager scoreManager;
+        public ScoreManager ScoreManager { get { return scoreManager; } }
+
+        [SerializeField]
         protected CardsManager cardsManager;
         public CardsManager CardsManager { get { return cardsManager; } }
 

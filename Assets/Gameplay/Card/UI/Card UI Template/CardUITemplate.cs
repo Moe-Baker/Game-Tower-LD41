@@ -30,6 +30,10 @@ namespace Game
         public Text Label { get { return label; } }
 
         [SerializeField]
+        protected Text useCost;
+        public Text UseCost { get { return useCost; } }
+
+        [SerializeField]
         protected Image icon;
         public Image Icon { get { return icon; } }
 
@@ -42,6 +46,7 @@ namespace Game
             base.SetData(data);
 
             label.text = data.name;
+            useCost.text = data.UseCost.ToString() + Environment.NewLine + "Cost";
             icon.sprite = data.Icon;
             description.text = data.Description;
         }

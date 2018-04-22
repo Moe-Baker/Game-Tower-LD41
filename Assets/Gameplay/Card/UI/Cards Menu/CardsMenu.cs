@@ -21,7 +21,7 @@ using Moe.Tools;
 
 namespace Game
 {
-	public class CardsMenu : MonoBehaviour
+	public class CardsMenu : Menu
 	{
 		[SerializeField]
         protected CardsUICreator _UICreator;
@@ -43,6 +43,8 @@ namespace Game
         public event Action<CardUITemplate> OnClick;
         protected virtual void OnCardClick(CardUITemplate template)
         {
+            Debug.Log("Card " + template.Data.name + " Clicked");
+
             if (OnClick != null)
                 OnClick(template);
         }
@@ -66,6 +68,11 @@ namespace Game
     [Serializable]
     public class CardsUICreator : ListUICreator<Card, CardUITemplate>
     {
+        public override void Create(IList<Card> data)
+        {
+            base.Create(data);
 
+            LayoutRebuilder.ForceRebuildLayoutImmediate(parent);
+        }
     }
 }

@@ -40,6 +40,9 @@ namespace Game
 
 		public virtual void StartPlacement(GameObject prefab)
         {
+            if (IsPlacing)
+                throw new Exception("Already Placing a tower");
+
             Placement = Instantiate(prefab).GetComponent<Tower>();
 
             Placement.enabled = false;
@@ -56,6 +59,11 @@ namespace Game
         protected virtual void PlacementHighlightAction(CardPlot card)
         {
             Placement.gameObject.SetActive(true);
+
+            card.gameObject.SetActive(false);
+
+            if (PlacementCardPlot != null)
+                PlacementCardPlot.gameObject.SetActive(true);
 
             PlacementCardPlot = card;
 

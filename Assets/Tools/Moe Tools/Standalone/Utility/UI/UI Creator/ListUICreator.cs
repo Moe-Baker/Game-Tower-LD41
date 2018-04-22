@@ -44,7 +44,7 @@ namespace Moe.Tools
         {
             for (int i = 0; i < Instances.Count; i++)
                 if (Instances[i] != null)
-                    Object.Destroy(Instances[i]);
+                    Object.Destroy(Instances[i].gameObject);
 
             Instances.Clear();
         }

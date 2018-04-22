@@ -17,19 +17,47 @@ using UnityEditorInternal;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
+using Moe.Tools;
+
 namespace Game
 {
 	public class Enemy : MonoBehaviour
 	{
         public AI AI { get; protected set; }
-
+        public Entity Entity { get { return AI.Entity; } }
 		public AINavigator Navigator { get { return AI.Navigator; } }
 
         public Castle Castle { get { return References.Level.Castle; } }
 
+        public ModulesManager Modules { get; protected set; }
+        public class ModulesManager : MoeLinkedModuleManager<Module, Enemy>
+        {
+
+        }
+
+        public class Module : MoeLinkedBehaviourModule<Enemy>
+        {
+
+        }
+
         protected virtual void Start()
         {
             AI = GetComponent<AI>();
+
+            InitModules();
+        }
+
+        protected virtual void InitModules()
+        {
+            Modules = new ModulesManager();
+
+            AddModules();
+
+            Modules.Init(this);
+        }
+        protected virtual void AddModules()
+        {
+            Modules.AddAll(gameObject);
         }
 
         protected virtual void Update()

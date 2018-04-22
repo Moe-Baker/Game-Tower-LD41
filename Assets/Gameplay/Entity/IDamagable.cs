@@ -19,20 +19,19 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class Castle : Entity
+	public interface IDamagable
 	{
-		[SerializeField]
-        protected float maxHealth;
-        public float MaxHealth { get { return maxHealth; } }
+        void TakeDamage(float damage, IDamager damager);
+	}
 
-        protected virtual void Reset()
-        {
-            maxHealth = health;
-        }
+    public interface IDamager
+    {
+        string Name { get; }
+        GameObject GameObject { get; }
+    }
 
-        protected override void DeathAction(IDamager damager)
-        {
-
-        }
+    public interface IUnitDamager : IDamager
+    {
+        Unit Unit { get; }
     }
 }

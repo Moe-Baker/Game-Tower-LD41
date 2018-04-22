@@ -23,6 +23,10 @@ namespace Game
 	public class Card : ScriptableObject
 	{
         [SerializeField]
+        protected uint useCost = 100;
+        public uint UseCost { get { return useCost; } }
+
+        [SerializeField]
         protected Sprite icon;
         public Sprite Icon { get { return icon; } }
 
