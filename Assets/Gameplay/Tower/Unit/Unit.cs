@@ -17,10 +17,17 @@ using UnityEditorInternal;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
+using Moe.Tools;
+
 namespace Game
 {
 	public class Unit : MonoBehaviour
 	{
+        public Tower Tower { get; protected set; }
 
-    }
+		public virtual void Init(Tower tower)
+        {
+            this.Tower = tower;
+        }
+	}
 }

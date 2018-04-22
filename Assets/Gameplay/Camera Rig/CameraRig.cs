@@ -96,15 +96,18 @@ namespace Game
         }
         protected virtual void MovePan(Vector2 input)
         {
-            var position = camera.transform.localPosition;
+            var position = transform.localPosition;
 
-            position.x += input.x * panSpeed * Time.deltaTime;
-            position.z += input.y * panSpeed * Time.deltaTime;
+            Vector3 offset = new Vector3(input.x, 0f, input.y);
+
+            offset *= panSpeed * Time.deltaTime;
+
+            position += offset;
 
             position.x = Mathf.Clamp(position.x, -panRange, panRange);
             position.z = Mathf.Clamp(position.z, -panRange, panRange);
 
-            camera.transform.localPosition = position;
+            transform.localPosition = position;
         }
     }
 }

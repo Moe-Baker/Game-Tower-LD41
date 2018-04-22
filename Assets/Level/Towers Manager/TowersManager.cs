@@ -19,7 +19,7 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class UnitsManager : MonoBehaviour
+	public class TowersManager : MonoBehaviour
 	{
         [SerializeField]
         protected GameObject prefab;
@@ -34,13 +34,13 @@ namespace Game
                 StartPlacement(prefab);
         }
 
-        public Unit Placement { get; protected set; }
+        public Tower Placement { get; protected set; }
         public CardPlot PlacementCardPlot { get; protected set; }
         public virtual bool IsPlacing { get { return Placement != null; } }
 
 		public virtual void StartPlacement(GameObject prefab)
         {
-            Placement = Instantiate(prefab).GetComponent<Unit>();
+            Placement = Instantiate(prefab).GetComponent<Tower>();
 
             Placement.enabled = false;
             Placement.gameObject.SetActive(false);
