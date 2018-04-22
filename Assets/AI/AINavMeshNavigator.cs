@@ -34,6 +34,14 @@ namespace Game
             }
         }
 
+        public override Vector3 Velocity
+        {
+            get
+            {
+                return Agent.velocity;
+            }
+        }
+
         public override void Init(AI link)
         {
             base.Init(link);

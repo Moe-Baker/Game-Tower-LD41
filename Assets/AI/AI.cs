@@ -38,9 +38,6 @@ namespace Game
 
         public Entity Entity { get; protected set; }
 
-        string IDamager.Name { get { return name; } }
-        GameObject IDamager.GameObject { get { return gameObject; } }
-
         protected virtual void Start()
         {
             Entity = GetComponent<Entity>();

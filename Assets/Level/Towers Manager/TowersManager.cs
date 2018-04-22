@@ -85,7 +85,7 @@ namespace Game
 
         protected virtual void EndPlacement()
         {
-            Placement.enabled = true;
+            Placement.Place();
 
             Level.CardsPlotManager.OnHighlight -= PlacementHighlightAction;
 

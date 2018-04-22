@@ -21,7 +21,7 @@ using UnityEngine.EventSystems;
 
 namespace Game
 {
-    public class Tower : MonoBehaviour, IPointerClickHandler
+    public class Tower : MonoBehaviour, ITowerDamager, IPointerClickHandler
     {
         [SerializeField]
         protected PartsData parts;
@@ -46,9 +46,15 @@ namespace Game
 
         public List<Unit> Units { get; protected set; }
 
-        protected virtual void Start()
+        Tower ITowerDamager.Tower { get { return this; } }
+
+        public virtual void Place()
         {
+            enabled = true;
+
             Units = new List<Unit>();
+
+            parts.DefaultUnit.Init(this);
         }
 
         public virtual void AddUnit(GameObject prefab)

@@ -24,6 +24,8 @@ namespace Game
 	{
         public abstract float DistanceToTarget { get; }
 
+        public abstract Vector3 Velocity { get; }
+
         public abstract void SetDestination(Vector3 value);
     }
 }

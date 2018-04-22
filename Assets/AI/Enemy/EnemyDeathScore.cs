@@ -34,7 +34,7 @@ namespace Game
 
         private void OnDeath(IDamager obj)
         {
-            if (obj.GameObject != Link.gameObject)
+            if (obj is ITowerDamager)
                 References.Level.ScoreManager.Add(points);
         }
     }

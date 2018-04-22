@@ -25,9 +25,34 @@ namespace Game
 	{
         public Tower Tower { get; protected set; }
 
-		public virtual void Init(Tower tower)
+        public ModulesManager Modules { get; protected set; }
+        public class ModulesManager : MoeLinkedModuleManager<Module, Unit>
+        {
+
+        }
+
+        public class Module : MoeLinkedBehaviourModule<Unit>
+        {
+
+        }
+
+        public virtual void Init(Tower tower)
         {
             this.Tower = tower;
+
+            InitModules();
+        }
+        protected virtual void InitModules()
+        {
+            Modules = new ModulesManager();
+
+            AddModules();
+
+            Modules.Init(this);
+        }
+        protected virtual void AddModules()
+        {
+            Modules.AddAll(gameObject);
         }
 	}
 }

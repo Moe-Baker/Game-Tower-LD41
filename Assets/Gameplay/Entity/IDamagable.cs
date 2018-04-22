@@ -26,12 +26,11 @@ namespace Game
 
     public interface IDamager
     {
-        string Name { get; }
-        GameObject GameObject { get; }
+        
     }
 
-    public interface IUnitDamager : IDamager
+    public interface ITowerDamager : IDamager
     {
-        Unit Unit { get; }
+        Tower Tower { get; }
     }
 }
