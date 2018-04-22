@@ -803,8 +803,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 338.84607, y: -66.95272}
-  m_SizeDelta: {x: 677.69214, y: 133.90544}
+  m_AnchoredPosition: {x: 355.5, y: -67}
+  m_SizeDelta: {x: 711, y: 134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304521716
 MonoBehaviour:
@@ -838,7 +838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Name
+  m_Text: Game Tower
 --- !u!222 &304521717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2435,8 +2435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 338.84607, y: -170.77971}
-  m_SizeDelta: {x: 241.68298, y: 33.748524}
+  m_AnchoredPosition: {x: 355.5, y: -170.5}
+  m_SizeDelta: {x: 232, y: 33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332319197
 MonoBehaviour:
@@ -2537,7 +2537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 232, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379574974
@@ -2585,7 +2585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Name
+  m_Text: Game Tower
 --- !u!222 &1379574976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2627,7 +2627,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 677.69214, y: 187.65396}
+  m_SizeDelta: {x: 711, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396420593
 MonoBehaviour:

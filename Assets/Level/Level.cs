@@ -29,6 +29,22 @@ namespace Game
             Current = this;
         }
 
+        [SerializeField]
+        protected Castle castle;
+        public Castle Castle { get { return castle; } }
+
+        [SerializeField]
+        protected CardsManager cardsManager;
+        public CardsManager CardsManager { get { return cardsManager; } }
+
+        [SerializeField]
+        protected CardsPlotManager cardsPlotManager;
+        public CardsPlotManager CardsPlotManager { get { return cardsPlotManager; } }
+
+        [SerializeField]
+        protected UnitsManager unitsManager;
+        public UnitsManager UnitsManager { get { return unitsManager; } }
+
         public LevelPause Pause { get; protected set; }
 
         public InGameMenu Menu { get; protected set; }

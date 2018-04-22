@@ -19,20 +19,8 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class TimedQuit : MonoBehaviour
+	public class Castle : MonoBehaviour
 	{
-		[SerializeField]
-        protected float delay = 2f;
-        public float Delay { get { return delay; } }
-
-        protected virtual void OnEnable()
-        {
-            Invoke("Action", delay);
-        }
-
-        protected virtual void Action()
-        {
-            References.Game.Quit();
-        }
-    }
+		
+	}
 }

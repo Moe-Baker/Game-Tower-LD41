@@ -19,20 +19,22 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class TimedQuit : MonoBehaviour
+	public class Enemy : MonoBehaviour
 	{
-		[SerializeField]
-        protected float delay = 2f;
-        public float Delay { get { return delay; } }
+        public AI AI { get; protected set; }
 
-        protected virtual void OnEnable()
+		public AINavigator Navigator { get { return AI.Navigator; } }
+
+        public Castle Castle { get { return References.Level.Castle; } }
+
+        protected virtual void Start()
         {
-            Invoke("Action", delay);
+            AI = GetComponent<AI>();
         }
 
-        protected virtual void Action()
+        protected virtual void Update()
         {
-            References.Game.Quit();
+            Navigator.SetDestination(Castle.transform.position);
         }
-    }
+	}
 }

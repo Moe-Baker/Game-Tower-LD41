@@ -17,22 +17,12 @@ using UnityEditorInternal;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
+using Moe.Tools;
+
 namespace Game
 {
-	public class TimedQuit : MonoBehaviour
+	public class CardsManager : MonoBehaviour
 	{
-		[SerializeField]
-        protected float delay = 2f;
-        public float Delay { get { return delay; } }
-
-        protected virtual void OnEnable()
-        {
-            Invoke("Action", delay);
-        }
-
-        protected virtual void Action()
-        {
-            References.Game.Quit();
-        }
-    }
+        
+	}
 }

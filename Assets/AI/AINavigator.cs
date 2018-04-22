@@ -19,20 +19,11 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class TimedQuit : MonoBehaviour
+    [RequireComponent(typeof(NavMeshAgent))]
+	public abstract class AINavigator : AI.Module
 	{
-		[SerializeField]
-        protected float delay = 2f;
-        public float Delay { get { return delay; } }
+        public abstract float DistanceToTarget { get; }
 
-        protected virtual void OnEnable()
-        {
-            Invoke("Action", delay);
-        }
-
-        protected virtual void Action()
-        {
-            References.Game.Quit();
-        }
+        public abstract void SetDestination(Vector3 value);
     }
 }
