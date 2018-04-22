@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c9c9a0f506858974b86f1b1e09480e31
-timeCreated: 1524379356
+guid: 3799d4d4e2d89f84bb4a3c105720e539
+timeCreated: 1524385475
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,11 +8,12 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: BrightCastleWall
-    2100002: DarkAccents
-    2100004: BrightBricks
+    2100002: Wood
+    2100004: Metal
+    2100006: Rock
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder.001
+    4300000: Cylinder.014
   externalObjects: {}
   materials:
     importMaterials: 1

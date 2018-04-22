@@ -29,6 +29,10 @@ namespace Game
             Cards = FindObjectsOfType<CardPlot>().ToList();
         }
 
+        public Level Level { get { return References.Level; } }
+        public CardsManager CardsManager { get { return References.Level.CardsManager; } }
+        public CardsInventoryManager CardsInventoryManager { get { return CardsManager.Inventory; } }
+
         public virtual void Start()
         {
             InitCards();
@@ -51,6 +55,8 @@ namespace Game
         public virtual void PickupCard(CardPlot card)
         {
             Cards.Remove(card);
+
+            CardsInventoryManager.Add(CardsManager.GetRandomCard());
 
             Destroy(card.gameObject);
         }

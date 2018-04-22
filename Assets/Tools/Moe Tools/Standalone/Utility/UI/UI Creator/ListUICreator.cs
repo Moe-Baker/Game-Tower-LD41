@@ -25,9 +25,9 @@ namespace Moe.Tools
         List<TTemplate> instances = new List<TTemplate>();
         public List<TTemplate> Instances { get { return instances; } }
 
-        public virtual void Create(TData[] data)
+        public virtual void Create(IList<TData> data)
         {
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < data.Count; i++)
             {
                 Instances.Add(Create(data[i]));
 

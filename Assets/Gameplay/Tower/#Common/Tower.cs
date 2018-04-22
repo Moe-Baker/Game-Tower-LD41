@@ -32,7 +32,7 @@ namespace Game
             [SerializeField]
             protected GameObject _base;
             public GameObject Base { get { return _base; } }
-            public const float BaseHeight = 4f;
+            public const float BaseHeight = 3f;
 
             [SerializeField]
             protected Unit defaultUnit;

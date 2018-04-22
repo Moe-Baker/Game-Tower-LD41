@@ -42,8 +42,8 @@ namespace Game
         public CardsPlotManager CardsPlotManager { get { return cardsPlotManager; } }
 
         [SerializeField]
-        protected TowersManager unitsManager;
-        public TowersManager UnitsManager { get { return unitsManager; } }
+        protected TowersManager towersManager;
+        public TowersManager TowersManager { get { return towersManager; } }
 
         public LevelPause Pause { get; protected set; }
 

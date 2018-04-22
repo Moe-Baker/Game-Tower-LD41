@@ -17,25 +17,23 @@ using UnityEditorInternal;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-using Moe.Tools;
-
 namespace Game
 {
-	public class CardsManager : MonoBehaviour
+    [CreateAssetMenu()]
+	public class Card : ScriptableObject
 	{
         [SerializeField]
-        protected Card[] list;
-        public Card[] List { get { return list; } }
-        public virtual Card GetRandomCard()
-        {
-            return list.GetRandom();
-        }
+        protected Sprite icon;
+        public Sprite Icon { get { return icon; } }
 
-        public CardsInventoryManager Inventory { get; protected set; }
+        [SerializeField]
+        [TextArea]
+        protected string description;
+        public string Description { get { return description; } }
 
-        protected virtual void Start()
+        public virtual void Use()
         {
-            Inventory = GetComponent<CardsInventoryManager>();
+
         }
     }
 }
