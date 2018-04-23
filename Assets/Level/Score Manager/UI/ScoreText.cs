@@ -37,7 +37,7 @@ namespace Game
 
         protected virtual void Set(uint points)
         {
-            Text.text = "Points: " + points.ToString();
+            Text.text = "Points: " + points.ToString("N0");
         }
 
         protected virtual void OnChanged(uint newValue)

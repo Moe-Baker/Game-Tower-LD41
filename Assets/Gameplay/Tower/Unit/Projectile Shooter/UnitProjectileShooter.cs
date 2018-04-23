@@ -60,6 +60,9 @@ namespace Game
             }
         }
 
+        public AudioClip sfx;
+        public AudioSource aud;
+
         void Update()
         {
             if (!Link)
@@ -112,6 +115,8 @@ namespace Game
 
             instance.Init(Link);
             instance.rigidbody.AddForce(instance.transform.forward * force, ForceMode.VelocityChange);
+
+            aud.PlayOneShot(sfx);
         }
     }
 }

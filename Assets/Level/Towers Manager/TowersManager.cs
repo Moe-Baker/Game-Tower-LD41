@@ -32,6 +32,8 @@ namespace Game
         public CardPlot PlacementCardPlot { get; protected set; }
         public virtual bool IsPlacing { get { return Placement != null; } }
 
+        public AudioClip placementSFX;
+
 		public virtual void StartPlacement()
         {
             if (IsPlacing)
@@ -86,6 +88,8 @@ namespace Game
             Level.CardsPlotManager.PickupCard(PlacementCardPlot);
 
             Placement = null;
+
+            Level.SFXManager.Play(placementSFX);
         }
     }
 }

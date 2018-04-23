@@ -37,6 +37,9 @@ namespace Game
         public Transform[] spawnPoints;
         public GameObject[] prefabs;
 
+        public AudioClip beginSFX;
+        public AudioClip endSFX;
+
         public void Init()
         {
             waveNumber = 1;
@@ -50,8 +53,6 @@ namespace Game
 
             while (true)
             {
-                Debug.Log("wave " + waveNumber + " started");
-
                 yield return WaveProcedure();
 
                 waveNumber++;
@@ -62,8 +63,13 @@ namespace Game
 
         IEnumerator WaveProcedure()
         {
-            var enemiesCount = enemiesPerWave + waveNumber * 4;
+            Level.Current.SFXManager.Play(beginSFX);
+            Level.Current.Menu.HUD.WavePopup.ShowStart();
+
+            var enemiesCount = enemiesPerWave + (waveNumber * 4);
             var deathCount = 0;
+
+            Debug.Log(enemiesCount);
 
             for (int i = 0; i < enemiesCount; i++)
             {
@@ -81,6 +87,9 @@ namespace Game
             {
                 yield return new WaitForEndOfFrame();
             }
+
+            Level.Current.SFXManager.Play(endSFX);
+            Level.Current.Menu.HUD.WavePopup.ShowEnd();
         }
         float GetSpawnDelay()
         {

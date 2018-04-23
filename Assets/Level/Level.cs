@@ -58,6 +58,8 @@ namespace Game
         protected EnemiesManager enemiesManager;
         public EnemiesManager EnemiesManager { get { return enemiesManager; } }
 
+        public SFXManager SFXManager;
+
         public DeathMenu DeathMenu;
 
         public LevelPause Pause { get; protected set; }

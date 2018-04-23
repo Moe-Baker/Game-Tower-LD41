@@ -32,7 +32,6 @@ namespace Game
             Show();
 
             this.Tower = tower;
-            Debug.Log(tower.name);
 
             cardsUI.Query(UpgradeQuery);
 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03a67a0918b3f743a15b9f847416d4a, type: 3}
+  m_Name: Golem Footsteps
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 88b8c7044c8a40d41a3bcfe66ee86390, type: 3}
+  - {fileID: 8300000, guid: 617cd05ac056ac54c864a479dab77e8e, type: 3}
+  - {fileID: 8300000, guid: 7ebfab2a6fe3c484487dc54f1371dc78, type: 3}
+  - {fileID: 8300000, guid: c19dbc6493189454ab150d41f7aa2a6e, type: 3}
+  - {fileID: 8300000, guid: 1a8ae764866f0de49b925962aada1421, type: 3}
+  - {fileID: 8300000, guid: 6e2b66c0fedc79d4f87b6a8525db5449, type: 3}

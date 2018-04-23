@@ -38,7 +38,7 @@ namespace Game
 
         private void OnCardPlotPickup(CardPlot obj)
         {
-            if (Level.CardsPlotManager.Cards.Count == 1)
+            if (Level.CardsPlotManager.Cards.Count == 0)
                 button.interactable = false;
         }
 
@@ -49,8 +49,6 @@ namespace Game
                 Level.ScoreManager.Subtract(card.UseCost);
 
                 Level.TowersManager.StartPlacement();
-
-
             }
         }
     }

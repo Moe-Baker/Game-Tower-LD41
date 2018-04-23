@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useCost: 3000
   icon: {fileID: 0}
-  description: Fires arrows at incoming enemies
+  description: A Tower Unit That Fires Arrows At Incoming Enemies
   prefab: {fileID: 1012247236050244, guid: b155187be2e1fd74f8ba9d13e4c7c2ed, type: 2}

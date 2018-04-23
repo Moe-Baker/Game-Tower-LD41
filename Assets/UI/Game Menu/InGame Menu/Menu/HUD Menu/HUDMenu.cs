@@ -25,9 +25,18 @@ namespace Game
         protected TowerUpgradeMenu towerUpgrade;
         public TowerUpgradeMenu TowerUpgrade { get { return towerUpgrade; } }
 
+        public CardAquireUI CardAquire;
+
+        public WavePopup WavePopup;
+
         public virtual void Init()
         {
+        }
+
+        private void Start()
+        {
+            CardAquire.Init();
 
         }
-	}
+    }
 }
