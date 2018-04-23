@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 167d3d4c655926c4ba124a6e9ebfafd1
-timeCreated: 1524379353
+guid: 11a5165eaff54b54f85d6d363cafbc04
+timeCreated: 1524513996
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: TreeBark
-    2100002: TreeDarkGreen
+    2100000: Wood
+    2100002: BrightWOod
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane
+    4300000: Cylinder.028
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TreeBark
-    second: {fileID: 2100000, guid: 275cb041458026143a8a8dbbbaa5159e, type: 2}
+      name: BrightWOod
+    second: {fileID: 2100000, guid: ef82c340c77b24a44bfcd3c1ad3535cb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TreeDarkGreen
-    second: {fileID: 2100000, guid: 8548fc95744992b42af69feb4db1a8ec, type: 2}
+      name: Wood
+    second: {fileID: 2100000, guid: 275cb041458026143a8a8dbbbaa5159e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
