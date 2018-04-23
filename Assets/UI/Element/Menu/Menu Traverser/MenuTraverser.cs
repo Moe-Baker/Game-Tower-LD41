@@ -100,14 +100,16 @@ namespace Game
             protected Menu target;
             public Menu Target { get { return target; } }
 
-            public bool IsValid { get { return relay != null && target != null; } }
+            public bool IsValid { get { return relay != null; } }
 
             public virtual void Register(Menu current)
             {
                 relay.Register(() =>
                 {
                     current.Close();
-                    target.Show();
+
+                    if(target)
+                        target.Show();
                 });
             }
 

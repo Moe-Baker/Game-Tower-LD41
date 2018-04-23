@@ -25,11 +25,12 @@ namespace Game
         protected List<Card> list;
         public List<Card> List { get { return list; } }
 
-        public CardsManager CardsManager { get { return References.Level.CardsManager; } }
+        public Level Level { get { return Level.Current; } }
+        public CardsManager CardsManager { get { return Level.CardsManager; } }
 
         protected virtual void Start()
         {
-            list = new List<Card>();
+
         }
 
         public event Action<Card> OnAdd;
@@ -42,15 +43,26 @@ namespace Game
         }
 
         public event Action<Card> OnUse;
-        public virtual void Use(Card card)
+        public virtual bool Use(Card card)
         {
             if (!list.Contains(card))
                 throw new ArgumentException("Inventory Doesn't have a card of " + card.name + " So It Cannot be used");
 
-            card.Use();
+            if (Level.ScoreManager.Value > card.UseCost)
+            {
+                Level.ScoreManager.Subtract(card.UseCost);
+                card.Use();
+                list.Remove(card);
 
-            if (OnUse != null)
-                OnUse(card);
+                if (OnUse != null)
+                    OnUse(card);
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

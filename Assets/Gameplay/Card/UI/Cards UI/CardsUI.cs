@@ -21,12 +21,12 @@ using Moe.Tools;
 
 namespace Game
 {
-	public class CardsMenu : Menu
+	public class CardsUI : MonoBehaviour
 	{
 		[SerializeField]
         protected CardsUICreator _UICreator;
         public CardsUICreator UICreator { get { return _UICreator; } }
-        protected virtual void CreateUI()
+        public virtual void CreateUI()
         {
             UICreator.DestroyInstances();
 
@@ -34,6 +34,9 @@ namespace Game
 
             for (int i = 0; i < UICreator.Instances.Count; i++)
                 InitCardTemplate(UICreator.Instances[i]);
+
+            if(QueryPredicate != null)
+                Query(QueryPredicate);
         }
         protected virtual void InitCardTemplate(CardUITemplate template)
         {
@@ -43,8 +46,6 @@ namespace Game
         public event Action<CardUITemplate> OnClick;
         protected virtual void OnCardClick(CardUITemplate template)
         {
-            Debug.Log("Card " + template.Data.name + " Clicked");
-
             if (OnClick != null)
                 OnClick(template);
         }
@@ -57,6 +58,24 @@ namespace Game
             Level.CardsManager.Inventory.OnUse += OnCardsChanged;
 
             CreateUI();
+        }
+
+        public Predicate<Card> QueryPredicate { get; protected set; }
+        public virtual void Query(Predicate<Card> predicate)
+        {
+            QueryPredicate = predicate;
+
+            for (int i = 0; i < UICreator.Instances.Count; i++)
+                UICreator.Instances[i].gameObject.SetActive(predicate(UICreator.Instances[i].Data));
+        }
+        public virtual void ClearQuery()
+        {
+            QueryPredicate = null;
+
+            for (int i = 0; i < UICreator.Instances.Count; i++)
+            {
+                UICreator.Instances[i].gameObject.SetActive(true);
+            }
         }
 
         protected virtual void OnCardsChanged(Card card)

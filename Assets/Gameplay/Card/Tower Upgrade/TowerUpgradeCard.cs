@@ -19,15 +19,11 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class HUDMenu : Menu
+    [CreateAssetMenu]
+	public class TowerUpgradeCard : Card
 	{
-        [SerializeField]
-        protected TowerUpgradeMenu towerUpgrade;
-        public TowerUpgradeMenu TowerUpgrade { get { return towerUpgrade; } }
-
-        public virtual void Init()
-        {
-
-        }
-	}
+		[SerializeField]
+        protected GameObject prefab;
+        public GameObject Prefab { get { return prefab; } }
+    }
 }

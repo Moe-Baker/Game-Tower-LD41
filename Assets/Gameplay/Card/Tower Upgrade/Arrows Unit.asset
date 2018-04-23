@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ff546210bdd6c458a6a0af2a302aa2, type: 3}
+  m_Name: Arrows Unit
+  m_EditorClassIdentifier: 
+  useCost: 3000
+  icon: {fileID: 0}
+  description: Fires arrows at incoming enemies
+  prefab: {fileID: 1012247236050244, guid: b155187be2e1fd74f8ba9d13e4c7c2ed, type: 2}

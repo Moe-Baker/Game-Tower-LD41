@@ -74,7 +74,9 @@ namespace Game
 
         void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
         {
-            
+            if (eventData.button != PointerEventData.InputButton.Left) return;
+
+            References.Level.Menu.HUD.TowerUpgrade.Display(this);
         }
 
         public virtual Enemy FindEnemy()
@@ -107,15 +109,6 @@ namespace Game
                 return null;
 
             return EnemiesManager.List[targetIndex];
-        }
-
-        public GameObject unitPrefab;
-        void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.H))
-            {
-                AddUnit(unitPrefab);
-            }
         }
     }
 }
