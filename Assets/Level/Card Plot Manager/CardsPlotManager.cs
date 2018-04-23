@@ -52,11 +52,15 @@ namespace Game
             card.OnUnHighlight += () => OnCardUnHighlight(card);
         }
 
+        public event Action<CardPlot> OnPickup;
         public virtual void PickupCard(CardPlot card)
         {
             Cards.Remove(card);
 
             CardsInventoryManager.Add(CardsManager.GetRandomCard());
+
+            if (OnPickup != null)
+                OnPickup(card);
 
             Destroy(card.gameObject);
         }

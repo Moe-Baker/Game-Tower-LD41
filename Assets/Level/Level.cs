@@ -32,10 +32,11 @@ namespace Game
         [SerializeField]
         protected Castle castle;
         public Castle Castle { get { return castle; } }
+        public bool IsPlaying { get { return castle.Health != 0f; } }
 
         [SerializeField]
-        protected Spawner spawner;
-        public Spawner Spawner { get { return spawner; } }
+        protected WaveSystem waveSystem;
+        public WaveSystem WaveSystem { get { return waveSystem; } }
 
         [SerializeField]
         protected ScoreManager scoreManager;
@@ -56,6 +57,8 @@ namespace Game
         [SerializeField]
         protected EnemiesManager enemiesManager;
         public EnemiesManager EnemiesManager { get { return enemiesManager; } }
+
+        public DeathMenu DeathMenu;
 
         public LevelPause Pause { get; protected set; }
 
@@ -79,7 +82,14 @@ namespace Game
 
             InitMenu();
 
-            spawner.Init();
+            waveSystem.Init();
+
+            castle.OnDied += OnDeath;
+        }
+
+        private void OnDeath(IDamager obj)
+        {
+            DeathMenu.Show();
         }
 
         protected virtual void InitPause()

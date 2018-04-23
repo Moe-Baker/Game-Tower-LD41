@@ -28,17 +28,11 @@ namespace Game
         public Level Level { get { return References.Level; } }
         public CardsPlotManager CardsPlotManager { get { return Level.CardsPlotManager; } }
 
-        protected virtual void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-                StartPlacement(prefab);
-        }
-
         public Tower Placement { get; protected set; }
         public CardPlot PlacementCardPlot { get; protected set; }
         public virtual bool IsPlacing { get { return Placement != null; } }
 
-		public virtual void StartPlacement(GameObject prefab)
+		public virtual void StartPlacement()
         {
             if (IsPlacing)
                 throw new Exception("Already Placing a tower");
