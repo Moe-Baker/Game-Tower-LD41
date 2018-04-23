@@ -46,6 +46,8 @@ namespace Game
         public event Action<CardUITemplate> OnClick;
         protected virtual void OnCardClick(CardUITemplate template)
         {
+            Debug.Log("Card " + template.Data.name + " Clicked");
+
             if (OnClick != null)
                 OnClick(template);
         }

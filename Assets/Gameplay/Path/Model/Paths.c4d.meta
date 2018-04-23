@@ -8,9 +8,14 @@ ModelImporter:
     100000: //RootNode
     100002: Straight_Path
     100004: Turn_Path
+    100006: CINEMA_4D_Editor
+    100008: Paths
     400000: //RootNode
     400002: Straight_Path
     400004: Turn_Path
+    400006: CINEMA_4D_Editor
+    400008: Paths
+    2000000: CINEMA_4D_Editor
     2100000: Paths
     2300000: Straight_Path
     2300002: Turn_Path
