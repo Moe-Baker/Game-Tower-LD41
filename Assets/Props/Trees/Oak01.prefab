@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4087842693846210}
   - component: {fileID: 33502535959608386}
   - component: {fileID: 23971234004608320}
-  - component: {fileID: 64770237778499802}
   m_Layer: 0
   m_Name: Oak01
   m_TagString: Untagged
@@ -56,8 +55,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 167d3d4c655926c4ba124a6e9ebfafd1, type: 3}
-  - {fileID: 2100002, guid: 167d3d4c655926c4ba124a6e9ebfafd1, type: 3}
+  - {fileID: 2100000, guid: 275cb041458026143a8a8dbbbaa5159e, type: 2}
+  - {fileID: 2100000, guid: 4bcfc2f93f4c82a4799a8a00ecf9d389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,18 +82,4 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528113106505488}
-  m_Mesh: {fileID: 4300000, guid: 167d3d4c655926c4ba124a6e9ebfafd1, type: 3}
---- !u!64 &64770237778499802
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528113106505488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 167d3d4c655926c4ba124a6e9ebfafd1, type: 3}

@@ -12,7 +12,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cylinder.008
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BirchWood
+    second: {fileID: 2100000, guid: 42aa3f1423b71f542a7fce4e48de1cd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 1cd65f56eedc3794381359803f89fc48, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

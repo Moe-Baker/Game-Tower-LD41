@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4930318738765646}
   - component: {fileID: 33033693336198772}
   - component: {fileID: 23740667428393902}
-  - component: {fileID: 64860709666698536}
   m_Layer: 0
   m_Name: Pine01
   m_TagString: Untagged
@@ -56,8 +55,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f02b397ac16189d49addc10d7361c7f4, type: 3}
-  - {fileID: 2100002, guid: f02b397ac16189d49addc10d7361c7f4, type: 3}
+  - {fileID: 2100000, guid: 275cb041458026143a8a8dbbbaa5159e, type: 2}
+  - {fileID: 2100000, guid: 4bcfc2f93f4c82a4799a8a00ecf9d389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,18 +82,4 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025881523207628}
-  m_Mesh: {fileID: 4300000, guid: f02b397ac16189d49addc10d7361c7f4, type: 3}
---- !u!64 &64860709666698536
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1025881523207628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f02b397ac16189d49addc10d7361c7f4, type: 3}

@@ -18,7 +18,47 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube.025
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrightBricks
+    second: {fileID: 2100000, guid: 35b8c21558f856f44a287b7a848bb097, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrightCastleWall
+    second: {fileID: 2100000, guid: 90f2c4d50c986884689ff1a42bfb276a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkAccents
+    second: {fileID: 2100000, guid: af401ff4cc0427646ad125c93ea4730b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkBricks
+    second: {fileID: 2100000, guid: 90891fd3dcabba248a3595be177f0484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlagBlue
+    second: {fileID: 2100000, guid: 82b63cbb8c8e9c541a6ad3e624968058, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlagWhite
+    second: {fileID: 2100000, guid: 0f071e39167cadf46b0b3ebc54c4bc44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeRoof
+    second: {fileID: 2100000, guid: 9167017e00c5df546bc97eb03e1c7e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a41066d57efb96d408f228876ce10fdf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -45,7 +45,32 @@ ModelImporter:
     7400002: Armature|Walk
     9500000: //RootNode
     13700000: Sphere
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GhostWhite
+    second: {fileID: 2100000, guid: 621409f2c61beb54bae23f52fcda3b5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 2ce51f2cf2496eb4e86502d28cba9e0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ReaperClothing
+    second: {fileID: 2100000, guid: 3a1d737bd1cb9cd4884907ccad61c2c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ReaperEyesEmissive
+    second: {fileID: 2100000, guid: 2f08d2515afe437448aee549ad2fe871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 48fb0ae1f87b68d4eb2dc03a18be5acb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

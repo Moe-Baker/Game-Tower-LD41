@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4724066687313458}
   - component: {fileID: 33902257137019622}
   - component: {fileID: 23942858211914134}
-  - component: {fileID: 64045214943829068}
   m_Layer: 0
   m_Name: Birch01
   m_TagString: Untagged
@@ -56,8 +55,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 059b484de1f23e54ba5f01feb168ab87, type: 3}
-  - {fileID: 2100002, guid: 059b484de1f23e54ba5f01feb168ab87, type: 3}
+  - {fileID: 2100000, guid: 42aa3f1423b71f542a7fce4e48de1cd9, type: 2}
+  - {fileID: 2100000, guid: 1cd65f56eedc3794381359803f89fc48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,18 +82,4 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435491203199432}
-  m_Mesh: {fileID: 4300000, guid: 059b484de1f23e54ba5f01feb168ab87, type: 3}
---- !u!64 &64045214943829068
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435491203199432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 059b484de1f23e54ba5f01feb168ab87, type: 3}

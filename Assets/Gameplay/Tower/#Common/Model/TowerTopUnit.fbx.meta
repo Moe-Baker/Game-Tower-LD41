@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Cylinder.012
     4300002: Cylinder_012
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrightCastleWall
+    second: {fileID: 2100000, guid: afcf221ad5821c64686a1122f05003b1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

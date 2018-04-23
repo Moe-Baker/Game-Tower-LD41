@@ -13,7 +13,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Cylinder.007
     4300002: Cylinder_007
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TreeBark
+    second: {fileID: 2100000, guid: 4bcfc2f93f4c82a4799a8a00ecf9d389, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

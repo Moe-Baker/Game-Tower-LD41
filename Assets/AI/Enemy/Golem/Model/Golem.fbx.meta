@@ -59,7 +59,22 @@ ModelImporter:
     7400006: Armature.001|WalkCycle
     9500000: //RootNode
     13700000: Icosphere.002
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 9d9357585d78b5640a5f0d54d7775088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 2927c698096678c4a8351f5d6cc231f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: d3be41e0baa21a54da41f8aa5743fb1b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
