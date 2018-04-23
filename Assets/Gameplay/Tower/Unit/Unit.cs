@@ -33,7 +33,8 @@ namespace Game
 
         public class Module : MoeLinkedBehaviourModule<Unit>
         {
-
+            public virtual Unit Unit { get { return Link; } }
+            public virtual Tower Tower { get { return Unit.Tower; } }
         }
 
         public virtual void Init(Tower tower)

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114737785739842744}
   - component: {fileID: 54347667655783084}
   - component: {fileID: 136772447258082670}
+  - component: {fileID: 114746549468055070}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -497,7 +498,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!95 &95265136190178704
 Animator:
@@ -538,7 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd3c48744e0ee5439123a6d77c28975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
 --- !u!114 &114737785739842744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,6 +552,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suicideOnHit: 1
   damage: 10
+--- !u!114 &114746549468055070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007956930144688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3d66e24489d4e45823b442e7cc13b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 250
 --- !u!114 &114755633310954784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850d0b1de52a90f49831b0274bbea68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 50
 --- !u!114 &114768937533425196
 MonoBehaviour:
   m_ObjectHideFlags: 1

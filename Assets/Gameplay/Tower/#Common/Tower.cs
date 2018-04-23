@@ -44,6 +44,8 @@ namespace Game
             public GameObject Top { get { return top; } }
         }
 
+        public EnemiesManager EnemiesManager { get { return References.Level.EnemiesManager; } }
+
         public List<Unit> Units { get; protected set; }
 
         Tower ITowerDamager.Tower { get { return this; } }
@@ -75,8 +77,39 @@ namespace Game
             
         }
 
-        public GameObject unitPrefab;
+        public virtual Enemy FindEnemy()
+        {
+            return FindEnemy(Mathf.Infinity);
+        }
+        public virtual Enemy FindEnemy(float range)
+        {
+            if (EnemiesManager.List.Count == 0)
+                return null;
 
+            if (EnemiesManager.List.Count == 1)
+                return EnemiesManager.List[0];
+
+            int targetIndex = 0;
+            float closestDistance = Mathf.Infinity;
+
+            for (int i = 0; i < EnemiesManager.List.Count; i++)
+            {
+                var currentDistance = Vector3.Distance(EnemiesManager.List[i].transform.position, transform.position);
+
+                if (currentDistance < closestDistance)
+                {
+                    targetIndex = i;
+                    closestDistance = currentDistance;
+                }
+            }
+
+            if (closestDistance > range)
+                return null;
+
+            return EnemiesManager.List[targetIndex];
+        }
+
+        public GameObject unitPrefab;
         void Update()
         {
             if(Input.GetKeyDown(KeyCode.H))

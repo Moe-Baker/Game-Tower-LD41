@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c902d5eece4cc8c4ca0c6f61b320c7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1936149849899392, guid: f2ad2ddfe21775243aabd29d4f5c39d7, type: 2}
+  projectile: {fileID: 1667814968009906, guid: 093db1ab30cee114e8503cc8a3f47634, type: 2}
   force: 40
   shootSetup:
     pivot: {fileID: 4078126841249206}

@@ -22,7 +22,7 @@ using Moe.Tools;
 namespace Game
 {
     [RequireComponent(typeof(Entity))]
-	public class AI : Entity, IDamager
+	public class AI : MonoBehaviour, IDamager
     {
         public ModulesManager Modules { get; protected set; }
 		public class ModulesManager : MoeLinkedModuleManager<Module, AI>

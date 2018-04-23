@@ -44,6 +44,8 @@ namespace Game
         {
             AI = GetComponent<AI>();
 
+            References.Level.EnemiesManager.Add(this);
+
             InitModules();
         }
 

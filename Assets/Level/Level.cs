@@ -34,6 +34,10 @@ namespace Game
         public Castle Castle { get { return castle; } }
 
         [SerializeField]
+        protected Spawner spawner;
+        public Spawner Spawner { get { return spawner; } }
+
+        [SerializeField]
         protected ScoreManager scoreManager;
         public ScoreManager ScoreManager { get { return scoreManager; } }
 
@@ -48,6 +52,10 @@ namespace Game
         [SerializeField]
         protected TowersManager towersManager;
         public TowersManager TowersManager { get { return towersManager; } }
+
+        [SerializeField]
+        protected EnemiesManager enemiesManager;
+        public EnemiesManager EnemiesManager { get { return enemiesManager; } }
 
         public LevelPause Pause { get; protected set; }
 
@@ -70,6 +78,8 @@ namespace Game
             InitPause();
 
             InitMenu();
+
+            spawner.Init();
         }
 
         protected virtual void InitPause()

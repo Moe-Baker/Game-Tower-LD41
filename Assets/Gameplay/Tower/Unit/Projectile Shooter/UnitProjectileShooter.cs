@@ -65,11 +65,11 @@ namespace Game
             if (!Link)
                 return;
 
-            var enemy = FindObjectOfType<Enemy>();
+            var enemy = Tower.FindEnemy(20);
 
             if(enemy)
             {
-                AimAt(enemy.transform.position, enemy.GetComponent<NavMeshAgent>().velocity);
+                AimAt(enemy.transform.position, enemy.AI.Navigator.Velocity);
 
                 if (!shooting)
                     StartCoroutine(ShootProcedure());
