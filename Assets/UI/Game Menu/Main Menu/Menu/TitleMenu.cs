@@ -66,7 +66,7 @@ namespace Game
         }
         protected virtual bool GetInput()
         {
-            if (MoeTools.Platform.Current == GameTargetPlatform.PC && Input.anyKey)
+            if (Input.anyKey)
                 return true;
 
             return Input.touchCount > 0;
