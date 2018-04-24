@@ -93,7 +93,7 @@ namespace Game
         }
         float GetSpawnDelay()
         {
-            return Mathf.Lerp(spawnDelay, 0.1f / spawnPoints.Length, waveNumber / 15);
+            return Mathf.Lerp(spawnDelay, 0.1f / spawnPoints.Length, waveNumber / 15f);
         }
 
         Entity Spawn()

@@ -45,6 +45,8 @@ namespace Game
 
         private void OnCardClicked(CardUITemplate template)
         {
+            Debug.Log(template.Data.name);
+
             var card = template.Data as TowerUpgradeCard;
 
             if (References.Level.CardsManager.Inventory.Use(card))

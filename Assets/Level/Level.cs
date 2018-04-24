@@ -91,6 +91,8 @@ namespace Game
 
         private void OnDeath(IDamager obj)
         {
+            waveSystem.StopAllCoroutines();
+
             DeathMenu.Show();
         }
 

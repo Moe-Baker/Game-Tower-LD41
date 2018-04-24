@@ -39,6 +39,13 @@ namespace Game
             rigidbody = GetComponent<Rigidbody>();
 
             MoeTools.GameObject.SetCollision(gameObject, Tower.gameObject, false);
+
+            Invoke("Destroy", 5f);
+        }
+
+        void Destroy()
+        {
+            Destroy(gameObject);
         }
 
         protected virtual void OnCollisionEnter(Collision collision)
