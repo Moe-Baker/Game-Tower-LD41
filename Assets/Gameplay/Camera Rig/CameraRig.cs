@@ -66,6 +66,11 @@ namespace Game
         {
             var input = Input.GetAxis("Mouse ScrollWheel");
 
+            if (Input.GetKey(KeyCode.Q))
+                input += -0.1f;
+            if (Input.GetKey(KeyCode.E))
+                input += 0.1f;
+
             if (Mathf.Approximately(input, 0f)) return;
             else if(input > 0f)
             {
@@ -78,7 +83,7 @@ namespace Game
         }
         protected virtual void MoveHeight(float target, float input)
         {
-            Height = Mathf.MoveTowards(Height, target, Mathf.Abs(input) * heightMoveSpeed * Time.deltaTime);
+            Height = Mathf.MoveTowards(Height, target, Mathf.Abs(input) * heightMoveSpeed * Time.unscaledDeltaTime);
         }
 
         protected virtual void UpdatePan()
@@ -100,7 +105,7 @@ namespace Game
 
             Vector3 offset = new Vector3(input.x, 0f, input.y);
 
-            offset *= panSpeed * Time.deltaTime;
+            offset *= panSpeed * Time.unscaledDeltaTime;
 
             position += offset;
 

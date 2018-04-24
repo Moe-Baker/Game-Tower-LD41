@@ -60,6 +60,11 @@ namespace Game
             CreateUI();
         }
 
+        protected virtual void OnEnable()
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(UICreator.Parent);
+        }
+
         public Predicate<Card> QueryPredicate { get; protected set; }
         public virtual void Query(Predicate<Card> predicate)
         {

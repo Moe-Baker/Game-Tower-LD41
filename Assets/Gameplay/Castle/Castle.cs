@@ -25,6 +25,14 @@ namespace Game
         protected float maxHealth;
         public float MaxHealth { get { return maxHealth; } }
 
+        public override void Heal(float points)
+        {
+            if (health + points > maxHealth)
+                points = maxHealth - health;
+
+            base.Heal(points);
+        }
+
         protected virtual void Reset()
         {
             maxHealth = health;

@@ -44,11 +44,17 @@ namespace Game
 
         void OnClick()
         {
+            if (Level.TowersManager.IsPlacing) return;
+
             if(Level.ScoreManager.Value >= card.UseCost)
             {
                 Level.ScoreManager.Subtract(card.UseCost);
 
                 Level.TowersManager.StartPlacement();
+            }
+            else
+            {
+                Level.CardsManager.Inventory.PlayPennis();
             }
         }
     }

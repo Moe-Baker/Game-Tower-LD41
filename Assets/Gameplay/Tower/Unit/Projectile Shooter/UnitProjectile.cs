@@ -43,9 +43,12 @@ namespace Game
 
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if(Entity.DoDamage(collision.gameObject, damage, Damager))
+            if(collision.gameObject != Level.Current.Castle.gameObject)
             {
-                
+                if (Entity.DoDamage(collision.gameObject, damage, Damager))
+                {
+
+                }
             }
 
             Destroy(gameObject);

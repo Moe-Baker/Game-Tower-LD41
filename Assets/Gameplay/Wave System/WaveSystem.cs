@@ -93,7 +93,7 @@ namespace Game
         }
         float GetSpawnDelay()
         {
-            return spawnDelay + waveNumber / 5;
+            return Mathf.Lerp(spawnDelay, 0.1f / spawnPoints.Length, waveNumber / 15);
         }
 
         Entity Spawn()
@@ -108,8 +108,8 @@ namespace Game
         {
             var maxRange = 1;
 
-            if (waveNumber > 5) maxRange = 2;
-            if (waveNumber > 10) maxRange = 3;
+            if (waveNumber >= 5) maxRange = 2;
+            if (waveNumber >= 10) maxRange = 3;
 
             return prefabs[Random.Range(0, maxRange)];
         }
@@ -117,8 +117,8 @@ namespace Game
         {
             var maxRange = 1;
 
-            if (waveNumber > 5) maxRange = 2;
-            if (waveNumber > 10) maxRange = 3;
+            if (waveNumber >= 5) maxRange = 2;
+            if (waveNumber >= 10) maxRange = 3;
 
             return spawnPoints[Random.Range(0, maxRange)];
         }

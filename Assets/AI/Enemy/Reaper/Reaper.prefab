@@ -29,6 +29,8 @@ GameObject:
   - component: {fileID: 136772447258082670}
   - component: {fileID: 114746549468055070}
   - component: {fileID: 82967330685703234}
+  - component: {fileID: 114469257462658052}
+  - component: {fileID: 114302405448469398}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -900,6 +902,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad985fec6a051af4fbebb96e7fda8490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114302405448469398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007956930144688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d710212d39ccfe49b4fb5919599f6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 0.1
 --- !u!114 &114314716093344508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -924,6 +938,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd3c48744e0ee5439123a6d77c28975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114469257462658052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007956930144688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3c6466e3be3e43adf92cb1abe34fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 2.5
 --- !u!114 &114737785739842744
 MonoBehaviour:
   m_ObjectHideFlags: 1

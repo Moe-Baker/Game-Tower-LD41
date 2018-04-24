@@ -45,13 +45,13 @@ namespace Game
 
         private void OnCardClicked(CardUITemplate template)
         {
-            cardsUI.OnClick -= OnCardClicked;
-
             var card = template.Data as TowerUpgradeCard;
 
             if (References.Level.CardsManager.Inventory.Use(card))
             {
                 Tower.AddUnit(card.Prefab);
+
+                cardsUI.OnClick -= OnCardClicked;
 
                 Close();
             }

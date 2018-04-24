@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ff546210bdd6c458a6a0af2a302aa2, type: 3}
   m_Name: Cannon Unit
   m_EditorClassIdentifier: 
-  useCost: 100
+  useCost: 6000
   icon: {fileID: 0}
   description: A Tower Unit That Fires Cannon Balls At Incoming Enemies
   prefab: {fileID: 1753061835476992, guid: 6690c6c31f45e2c448afbf16d1b13961, type: 2}

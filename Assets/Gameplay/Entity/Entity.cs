@@ -31,6 +31,18 @@ namespace Game
                 return health;
             }
         }
+        public event Action<float> OnHealthChanged;
+        protected void TriggerHealthChange()
+        {
+            if (OnHealthChanged != null)
+                OnHealthChanged(health);
+        }
+        public virtual void Heal(float points)
+        {
+            health += points;
+
+            TriggerHealthChange();
+        }
 
         protected virtual void Awake()
         {
@@ -59,6 +71,8 @@ namespace Game
 
                 if (OnTookDamage != null)
                     OnTookDamage(damage, damager);
+
+                TriggerHealthChange();
             }
             else
             {
@@ -66,6 +80,8 @@ namespace Game
 
                 if (OnTookDamage != null)
                     OnTookDamage(damage, damager);
+
+                TriggerHealthChange();
 
                 Died(damager);
             }

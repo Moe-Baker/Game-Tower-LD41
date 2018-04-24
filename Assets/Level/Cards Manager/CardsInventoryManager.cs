@@ -28,6 +28,8 @@ namespace Game
         public Level Level { get { return Level.Current; } }
         public CardsManager CardsManager { get { return Level.CardsManager; } }
 
+        public AudioClip PennisSFX;
+
         protected virtual void Start()
         {
 
@@ -48,7 +50,7 @@ namespace Game
             if (!list.Contains(card))
                 throw new ArgumentException("Inventory Doesn't have a card of " + card.name + " So It Cannot be used");
 
-            if (Level.ScoreManager.Value > card.UseCost)
+            if (Level.ScoreManager.Value >= card.UseCost)
             {
                 Level.ScoreManager.Subtract(card.UseCost);
                 card.Use();
@@ -61,8 +63,15 @@ namespace Game
             }
             else
             {
+                PlayPennis();
+
                 return false;
             }
+        }
+
+        public void PlayPennis()
+        {
+            References.Level.SFXManager.Play(PennisSFX);
         }
     }
 }

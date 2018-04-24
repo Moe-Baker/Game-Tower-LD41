@@ -259,6 +259,8 @@ GameObject:
   - component: {fileID: 54144558210128596}
   - component: {fileID: 136820104120239698}
   - component: {fileID: 114080064796809044}
+  - component: {fileID: 114903189022548274}
+  - component: {fileID: 114735446236190992}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -938,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3d66e24489d4e45823b442e7cc13b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 250
+  points: 300
 --- !u!114 &114089372622449432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1012,6 +1014,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suicideOnHit: 1
   damage: 10
+--- !u!114 &114735446236190992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668017140103616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d710212d39ccfe49b4fb5919599f6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 0.1
+--- !u!114 &114903189022548274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668017140103616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3c6466e3be3e43adf92cb1abe34fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 2.5
 --- !u!136 &136820104120239698
 CapsuleCollider:
   m_ObjectHideFlags: 1

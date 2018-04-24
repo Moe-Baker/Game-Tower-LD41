@@ -75,8 +75,28 @@ namespace Game
                 AimAt(enemy.transform.position, enemy.AI.Navigator.Velocity);
 
                 if (!shooting)
-                    StartCoroutine(ShootProcedure());
+                {
+                    if (CheckFor(enemy.gameObject))
+                        StartCoroutine(ShootProcedure());
+                }
             }
+        }
+
+        public LayerMask mask = Physics.DefaultRaycastLayers;
+
+        bool CheckFor(GameObject target)
+        {
+            RaycastHit hit;
+
+            if (Physics.Linecast(shootSetup.Point.position, target.transform.position + Vector3.up * 1f, out hit, mask))
+            {
+                if (hit.transform.gameObject == target)
+                    return true;
+
+                return false;
+            }
+            else
+                return false;
         }
 
         bool shooting = false;

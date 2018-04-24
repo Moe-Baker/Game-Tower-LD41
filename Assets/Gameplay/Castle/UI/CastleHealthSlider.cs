@@ -33,7 +33,7 @@ namespace Game
             Slider.maxValue = Castle.MaxHealth;
             SetValue(Castle.Health);
 
-            Castle.OnTookDamage += OnDamaged;
+            Castle.OnHealthChanged += OnDamaged;
         }
 
         protected virtual void SetValue(float health)
@@ -41,7 +41,7 @@ namespace Game
             Slider.value = health;
         }
 
-        private void OnDamaged(float damage, IDamager damager)
+        private void OnDamaged(float health)
         {
             SetValue(Castle.Health);
         }

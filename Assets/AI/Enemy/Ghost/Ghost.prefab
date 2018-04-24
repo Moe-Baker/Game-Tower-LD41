@@ -62,6 +62,8 @@ GameObject:
   - component: {fileID: 114090376796688114}
   - component: {fileID: 54814305713720158}
   - component: {fileID: 136073918991490826}
+  - component: {fileID: 114269778371902924}
+  - component: {fileID: 114316219125620842}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -371,7 +373,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3d66e24489d4e45823b442e7cc13b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 100
+  points: 150
+--- !u!114 &114269778371902924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1460920235672736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e3c6466e3be3e43adf92cb1abe34fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 2.5
+--- !u!114 &114316219125620842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1460920235672736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d710212d39ccfe49b4fb5919599f6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perWaveIncrease: 0.1
 --- !u!114 &114355989234371506
 MonoBehaviour:
   m_ObjectHideFlags: 1
